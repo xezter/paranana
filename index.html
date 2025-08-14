@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+  <title>para nana</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://api.fontshare.com/v2/css?f[]=array@401&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container" id="main-container">
+    <!-- Alternating white and black pulses -->
+    <div class="pulse white"></div>
+    <div class="pulse black"></div>
+    <div class="pulse white"></div>
+    <div class="pulse black"></div>
+    <div class="pulse white"></div>
+    <div class="pulse black"></div>
+    
+    <!-- Background text -->
+    <div class="background-text">Nana</div>
+    
+    <!-- Added wrapper div for the image -->
+    <div class="image-container">
+      <img src="cat1.png" alt="Cat with toys" class="cat-overlay">
+    </div>
+    <div class="timer-container">
+        <div class="timer">Tempo que nos conhecemos <span class="time">0</span> seconds</div>
+        <div class="rank">Level do tempo: <span class="rank-name">Guy who just got here 👋</span></div>
+    </div>
+  </div>
+
+  <!-- Música de fundo -->
+  <audio id="bgMusic" src="softlove.mp3" loop></audio>
+
+  <script src="js/timer.js"></script>
+  <script>
+    const audio = document.getElementById('bgMusic');
+
+    // Toca a música quando o usuário clicar em qualquer lugar
+    document.body.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+      }
+    });
+  </script>
+</body>
+</html>
